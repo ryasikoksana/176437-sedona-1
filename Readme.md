@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Оксана Рясик](https://up.htmlacademy.ru/adaptive/14/user/176437).
-* Наставник: `Неизвестно`.
+* Наставник: Сергей Зубов.
 
 ---
 
