@@ -1,46 +1,45 @@
-.advantage { 
-	outline: 1px solid green;
-	position: relative;
-	padding: 40px 20px;
-	font-family: "PT Sans", "Arial", sans-serif;
-	font-size: 14px;
-	line-height: 21px;
-	font-weight: 400;
-	background: @gray;
-	color: @black;
-	text-transform: uppercase;
-	text-align: center;
-	&--blue1::before {
-		content: "";
-		position: absolute;
-		top: -10px;
-		left: 0;
-		width: 100%;
-		height: 37px;
-		background: url(../../img/bg-triangle.svg) no-repeat center;
-		background-size: cover;
-	}
-	&--blue {
-		background: @blue;
-	}
-	&--blue1 {
-		padding-top: 72px;
-	}
-	&--gray {
-		background: @gray;
-		padding: 29px 35px;
-	}
+.advantage {
+outline: 1px solid green;
+position: relative;
+padding: 40px 20px;
+font-family: "PT Sans", "Arial", sans-serif;
+font-size: 14px;
+line-height: 21px;
+font-weight: 400;
+background: @gray;
+color: @black;
+text-transform: uppercase;
+text-align: center;
+&--blue1::before {
+content: "";
+position: absolute;
+top: -10px;
+left: 0;
+width: 100%;
+height: 37px;
+background: url(../../img/bg-triangle.svg) no-repeat center;
+background-size: cover;
+}
+&--blue {
+background: @blue;
+}
+&--blue1 {
+padding-top: 72px;
+}
+&--gray {
+background: @gray;
+padding: 29px 35px;
+}
 }
 
 .advantage__title {
-	.font-title();
+.font-title();
 }
 
 .advantage__number {
-	padding: 15px 0 20px 0;
+padding: 15px 0 20px 0;
 }
 
 .advantage__text {
-	.indents();
+.indents();
 }
-

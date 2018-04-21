@@ -1,38 +1,38 @@
 .banner {
-	outline: 1px solid green;
-	position: relative;
-	background-color: @blue;
-	background-image: url(../../img/bg-back-mobile@1x.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	&::after {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 320px;
-		height: 27px;
-		background: url(../../img/bg-intro-triangle-mobile.svg) no-repeat bottom center;
-		background-size: cover;
-	}
-	&--page2 {
-		background-position: bottom center;
-		background-size: auto;
-	}
+outline: 1px solid green;
+position: relative;
+background-color: @blue;
+background-image: url(../../img/bg-back-mobile@1x.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+&::after {
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+width: 320px;
+height: 27px;
+background: url(../../img/bg-intro-triangle-mobile.svg) no-repeat bottom center;
+background-size: cover;
+}
+&--page2 {
+background-position: bottom center;
+background-size: auto;
+}
 }
 
 .banner__text {
-	display: block;
-	width: 282px;
-	height: 214px;
-	margin: 0 auto;
-	padding-top: 90px;
-	padding-bottom: 85px;
-	&--page2 {
-		width: 229px;
-		height: 39px;
-		padding-top: 52px;
-		padding-bottom: 67px;
-	}
+display: block;
+width: 282px;
+height: 214px;
+margin: 0 auto;
+padding-top: 90px;
+padding-bottom: 85px;
+&--page2 {
+width: 229px;
+height: 39px;
+padding-top: 52px;
+padding-bottom: 67px;
+}
 }

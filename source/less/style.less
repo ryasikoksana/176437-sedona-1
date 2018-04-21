@@ -1,10 +1,12 @@
+@import "blocks/variables.less";
+@import "blocks/mixin.less";
+@import "blocks/font.less";
 @import "blocks/normalize.less";
-@import "blocks/body.less";
+@import "blocks/global.less";
 @import "blocks/header.less";
 @import "blocks/menu-list.less";
 @import "blocks/main-nav.less";
 @import "blocks/nav-open.less";
-@import "blocks/main.less";
 @import "blocks/banner.less";
 @import "blocks/advantages.less";
 @import "blocks/advantage.less";
@@ -21,35 +23,3 @@
 @import "blocks/social.less";
 @import "blocks/copyright.less";
 @import "blocks/popup.less";
-
-@font-face {
-	font-family: "PT Sans";
-	src: url(../fonts/ptsans.woff2) format("wooff2"),
-	url(../fonts/ptsans.woff) format("wooff");
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "PT Sans";
-	src: url(../fonts/ptsansbold.woff2) format("wooff2"),
-	url(../fonts/ptsansbold.woff) format("wooff");
-	font-weight: bold;
-	font-style: normal;
-}
-
-@black: #333333; 
-@white: #ffffff; 
-@blue: #81b3d2;
-@gray: #eeeeee;
-
-.indents() {
-	margin: 0;
-	padding: 0;
-}
-
-.font-title() {
-	font-size: 18px;
-	line-height: 26px;
-	font-weight: 700;
-}
