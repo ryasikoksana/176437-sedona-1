@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header">
@@ -11,13 +12,13 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list menu-list">
             <li class="menu-list__item">
-              <a class="menu-list__link">Главная</a>
+              <a class="menu-list__link" href="index.html">Главная</a>
             </li>
             <li class="menu-list__item">
-              <a class="menu-list__link" href="#">Фото и ведео</a>
+              <a class="menu-list__link" href="photo.html">Фото и видео</a>
             </li>
-            <li class="menu-list__item menu-list__item--active">
-              <a class="menu-list__link" href="#">Форма отзыва</a>
+            <li class="menu-list__item">
+              <a class="menu-list__link menu-list__link--active">Форма отзыва</a>
             </li>
             <li class="menu-list__item">
               <a class="menu-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
@@ -25,82 +26,88 @@
           </ul>
         </div>
       </nav>
-      <a class="header__logo" href="index.html">
-        <img class="header__logo-image" src="img/1.svg" width="102" height="83" alt="Логотип «Седона»">
-      </a>
+      <div class="header__logo">
+      	<a class="header__link" href="index.html">
+       		<div class="header__logo-image">
+        		<img class="header__logo-img" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип «Седона»">
+        	</div>
+      	</a>
+      </div>
     </header>
     <main class="main">
-      <section class="banner-photo">
-        <img class="banner-photo__text" src="img/6.svg" width="229" height="39" alt="Седона">
+      <section class="banner banner--page2">
+        <img class="banner__text banner__text--page2" src="img/text-sedona.svg" alt="Седона">
       </section>
-      <section class="feedback">
-        <header class="feedback__header">
-          <h1 class="feedback__title">Оставить свой oтзыв</h1>
-          <p class="feedback__text">Помогите нашим отелям стать лучше! Оставте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      <section class="advantages">
+        <header class="advantages__header advantages__header--feedback">
+          <h1 class="advantages__title advantages__title--feedback">Оставьте свой oтзыв</h1>
+          <p class="advantages__text">Помогите нашим отелям стать лучше! Оставте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </header>
         <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form__name">
-            <legend>Представьтесь:</legend>
+          <fieldset class="form__fieldset form__fieldset--name">
+            <legend class="form__legend">Представьтесь:</legend>
             <label for="name">Имя:</label>
             <input class="form__input-text" type="text" name="name" id="name" placeholder="Петр" required>
             <br>
             <label for="surname">Фамилия:</label>
-            <input class="form__input-text" type="text" name="surname" id="surname" placeholder="Иванов" required>
+            <input class="form__input-text form__input-text--surname" type="text" name="surname" id="surname" placeholder="Иванов" required>
             <br>
             <label for="patronymic">Отчество:</label>
-            <input class="form__input-text" type="text" name="patronymic" id="patronymic" placeholder="Александрович" required>
+            <input class="form__input-text form__input-text--patronymic" type="text" name="patronymic" id="patronymic" placeholder="Александрович" required>
           </fieldset>
-          <fieldset class="form__contacts">
-            <legend>Контактная информация:</legend>
-            <label for="tel">Контактный телефон:</label>
-            <input class="form__input-text" type="tel" name="tel" id="tel" placeholder="Введите телефон" required>
+          <fieldset class="form__fieldset form__fieldset--contacts">
+            <legend class="form__legend">Контактная информация:</legend>
+            <label for="tel" class="form__label-tel">Контактный телефон:</label>
+            <input class="form__input-text form__input-text--tel" type="tel" name="tel" id="tel" placeholder="Введите телефон" required>
             <br>
-            <label for="email">Электронная почта:</label>
-            <input class="form__input-text" type="email" name="email" id="email" placeholder="Введите e-mail" required>
+            <label for="email" class="form__label-email">Электронная почта:</label>
+            <input class="form__input-text form__input-text--email" type="email" name="email" id="email" placeholder="Введите e-mail" required>
           </fieldset>
-          <fieldset class="form__impression">
-            <legend>Ваше общее впечатление:</legend>
-            <ul>
+          <fieldset class="form__fieldset form__fieldset--impression">
+            <legend class="form__legend">Ваше общее впечатление:</legend>
+            <ul class="form__list">
               <li class="form__option">
                 <input class="form__input form__input--radio visually-hidden" type="radio" name="positive-option" id="positive-option" checked>
-                <label for="positive-option">Скорее положительное</label>
+                <label for="positive-option" class="form__label-option">Скорее положительное</label>
               </li>
               <li class="form__option">
                 <input class="form__input form__input--radio visually-hidden" type="radio" name="negative-option" id="negative-option">
-                <label for="negative-option">Скорее отрицательное</label>
+                <label for="negative-option" class="form__label-option">Скорее отрицательное</label>
               </li>
               <li class="form__option">
                 <input class="form__input form__input--radio visually-hidden" type="radio" name="no-option" id="no-option">
-                <label for="no-option">Затрудняюсь ответить</label>
+                <label for="no-option" class="form__label-option">Затрудняюсь ответить</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__attraction">
-            <legend>Посещенные достопримечательности:</legend>
-            <ul>
+          <fieldset class="form__fieldset form__fieldset--attraction">
+            <legend class="form__legend">Посещенные достопримечательности:</legend>
+            <ul class="form__list">
               <li class="form__option">
                 <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="bridge" id="bridge-option" checked>
-                <label for="bridge-option">Мост Дьявола</label>
+                <label for="bridge-option" class="form__label-option">Мост Дьявола</label>
               </li>
               <li class="form__option">
                 <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="mountain" id="mountain-option" checked>
-                <label for="mountain-option">Гора-Колокол</label>
+                <label for="mountain-option" class="form__label-option">Гора-Колокол</label>
               </li>
               <li class="form__option">
                 <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="park" id="park-option" checked>
-                <label for="park-option">Слайд-Парк</label>
+                <label for="park-option" class="form__label-option">Слайд-Парк</label>
               </li>
               <li class="form__option">
                 <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="cliffs" id="cliffs-option">
-                <label for="cliffs-option">Красные скалы</label>
+                <label for="cliffs-option" class="form__label-option">Красные скалы</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__emotions">
-            <legend>Опишите свои эмоции:</legend>
-            <textarea class="form__textarea" name="details" placeholder="Опишите подробно все свои восторги"></textarea>
+          <fieldset class="form__fieldset form__fieldset--emotions">
+            <legend class="form__legend">Опишите свои эмоции:</legend>
+            <textarea class="form__textarea" name="details" rows="5" required>Опишите подробно все свои восторги</textarea>
           </fieldset>
-          <button class="form__button button" type="submit">Отправить отзыв</button>
+          <div class="form__wrapper">
+          	<button class="form__button button" type="submit">Отправить отзыв</button>
+          </div>
         </form>
       </section>
     </main>
@@ -123,7 +130,7 @@
         <h2 class="popup__title">Что-то пошло не так!</h2>
         <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
       </div>
-      <div class="popup__close">
+      <div class="popup__close popup__close--gray">
         <a class="popup__button button" href="form.html">Ok</a>
       </div>
     </div>
