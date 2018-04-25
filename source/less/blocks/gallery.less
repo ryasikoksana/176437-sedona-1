@@ -1,0 +1,19 @@
+.gallery__photo {
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .gallery__photo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 648px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery__photo {
+    width: 1200px;
+  }
+}

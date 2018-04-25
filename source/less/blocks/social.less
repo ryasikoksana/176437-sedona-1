@@ -1,50 +1,62 @@
 .social {
-outline: 1px solid green;
-margin-top: 38px;
-margin-bottom: 40px;
-font-size: 0;
-text-align: center;
+  width: 100%;
+  margin-top: 38px;
+  margin-bottom: 40px;
+  font-size: 0;
+  text-align: center;
 }
 
 .social__link {
-position: relative;
-display: inline-block;
-width: 46px;
-height: 48px;
-background: @blue;
-margin: 0 3px;
-&--twitter::before {
-content: "";
-position: absolute;
-top: 17px;
-left: 14px;
-width: 18px;
-height: 15px;
-background: url(../../img/icon-twitter.svg) no-repeat;
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  background: @blue;
+  margin: 0 3px;
+
+  &--twitter::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 14px;
+    width: 18px;
+    height: 15px;
+    background: url("../../img/icon-twitter.svg") no-repeat;
+  }
+
+  &--facebook::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 19px;
+    width: 9px;
+    height: 19px;
+    background: url("../../img/icon-facebook.svg") no-repeat;
+  }
+
+  &--youtube::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 13px;
+    width: 20px;
+    height: 15px;
+    background: url("../../img/icon-youtube.svg") no-repeat;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
 }
-&--facebook::before {
-content: "";
-position: absolute;
-top: 14px;
-left: 19px;
-width: 9px;
-height: 19px;
-background: url(../../img/icon-facebook.svg) no-repeat;
-}
-&--youtube::before {
-content: "";
-position: absolute;
-top: 17px;
-left: 13px;
-width: 20px;
-height: 15px;
-background: url(../../img/icon-youtube.svg) no-repeat;
-}
-&:hover,
-&:focus {
-background-color: #669ec0;
-}
-&:active {
-background-color: #5496bd;
-}
+
+@media (min-width: @tablet-width) {
+  .social {
+    width: 33.33333333333333%;
+    margin: 0;
+  }
 }

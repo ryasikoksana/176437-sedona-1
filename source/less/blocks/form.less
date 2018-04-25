@@ -1,110 +1,212 @@
 .form {
-margin-bottom: 74px;
-font-family: "PT Sans", "Arial", sans-serif;
-font-size: 14px;
-line-height: 26px;
-font-weight: 400;
-color: @black;
+  margin-bottom: 74px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color: @black;
 }
 
 .form input {
-font-family: "PT Sans", "Arial", sans-serif;
-.font-title();
-background: #f2f2f2;
-color: #000000;
-border: none;
-&:hover {
-background: #e5e5e5;
-}
-&:focus {
-background: transparent;
-border: 4px solid #e5e5e5;
-}
+  font-family: "PT Sans", "Arial", sans-serif;
+  .font-title();
+  background: #f2f2f2;
+  color: #000000;
+  border: none;
+
+  &:hover {
+    background: #e5e5e5;
+  }
+
+  &:focus {
+    background: transparent;
+    border: 4px solid #e5e5e5;
+  }
 }
 
 .form__fieldset {
-outline: 1px solid green;
-border: none;
-border-bottom: 1px solid #e5e5e5;
-&--name {
-padding: 20px;
-}
-&--contacts {
-padding: 24px 20px;
-}
-&--impression {
-padding: 26px 20px;
-}
-&--attraction {
-padding: 20px 25px;
-}
-&--emotions {
-padding: 20px;
-border: none;
-}
+  outline: 1px solid green;
+  position: relative;
+  width: 320px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+
+  &--name {
+    padding: 20px;
+  }
+
+  &--contacts {
+    padding: 24px 20px;
+  }
+
+  &--impression {
+    padding: 26px 20px;
+  }
+
+  &--attraction {
+    padding: 20px 25px;
+  }
+
+  &--emotions {
+    padding: 20px;
+    border: none;
+  }
 }
 
 .form__legend {
-padding-top: 20px;
-.font-title();
-color: #000000;
-text-align: center;
+  padding-top: 20px;
+  .font-title();
+  color: #000000;
+  text-align: center;
 }
 
 .form__input-text {
-box-sizing: border-box;
-width: 205px;
-padding: 16px 3px 16px 22px;
-margin: 5px 0 5px 10px;
-&--surname,
-&--patronymic {
-width: 167px;
-margin: 5px 0 5px 11px;
-}
-&--tel {
-width: 255px;
-margin: 10px 0 15px 0;
-}
-&--email {
-width: 255px;
-margin: 10px 0 5px 0;
-}
+  box-sizing: border-box;
+  width: 230px;
+  padding: 16px 3px 16px 22px;
+  margin: 5px 0 5px 10px;
+
+  &--surname,
+  &--patronymic {
+    width: 191px;
+    margin: 5px 0 5px 11px;
+  }
+
+  &--tel {
+    width: 280px;
+    margin: 10px 0 15px 0;
+  }
+
+  &--email {
+    width: 280px;
+    margin: 10px 0 5px 0;
+  }
 }
 
 .form__label-tel,
 .form__label-email {
-padding-left: 22px;
+  padding-left: 22px;
 }
 
 .form__list {
-.indents();
-list-style: none;
+  .indents();
+  list-style: none;
 }
 
 .form__label-option {
-padding-left: 75px;
-.font-title();
-color: #000000;
-text-transform: none;
+  padding-left: 75px;
+  .font-title();
+  color: #000000;
+  text-transform: none;
 }
 
 .form__textarea {
-box-sizing: border-box;
-width: 100%;
-padding: 17px 20px;
-font-family: "PT Sans", "Arial", sans-serif;
-.font-title();
-color: #000000;
-background: #f2f2f2;
-border: none;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 17px 20px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  .font-title();
+  color: #000000;
+  background: #f2f2f2;
+  border: none;
 }
 
 .form__wrapper {
-padding: 0 20px;
+  padding: 0 20px;
 }
 
 .form__button {
-display: block;
-width: 100%;
-margin-top: 31px;
+  display: block;
+  width: 100%;
+  margin-top: 31px;
+}
+
+.form__hint {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    width: 768px;
+    padding: 0 60px;
+    margin-bottom: 61px;
+    box-sizing: border-box;
+  }
+
+  .form__elements {
+    outline: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+
+  .form__fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+    width: 100%;
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      width: 50%;
+      flex-wrap: nowrap;
+      box-sizing: border-box;
+    }
+
+      &:nth-child(3) {
+        order: -1;
+    }
+  }
+
+  .form__legend {
+    padding-top: 0;
+  }
+
+  .form__input-text {
+    width: 214px;
+    padding: 16px 3px 16px 22px;
+    margin: 5px 0 5px 10px;
+
+    &--surname,
+    &--patronymic {
+      width: 178px;
+      margin: 5px 0 5px 11px;
+    }
+
+    &--tel {
+      width: 100%;
+      margin: 10px 0 15px 0;
+    }
+
+    &--email {
+      width: 100%;
+      margin: 10px 0 5px 0;
+    }
+  }
+
+  .form__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0;
+    margin-top: 58px;
+  }
+
+  .form__button {
+    width: 50%;
+    margin: 0;
+  }
+
+  .form__hint {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    width: 1200px;
+    padding: 0 120px;
+    margin-bottom: 67px;
+  }
 }
