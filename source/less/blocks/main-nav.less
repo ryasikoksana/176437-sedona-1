@@ -1,11 +1,26 @@
 .main-nav {
-outline: 1px solid green;
-position: relative;
-background: @blue;
+  position: relative;
+  width: 100%;
+  background-color: @white;
 }
 
 .main-nav__toggle {
-position: absolute;
-top: 0;
-right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    order: 2;
+  }
+
+  .main-nav__list {
+    display: flex;
+    width: 100%;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
 }
