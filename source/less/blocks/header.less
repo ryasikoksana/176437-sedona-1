@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   width: 320px;
-  margin: 0 auto;
   background-color: @white;
 }
 
@@ -11,9 +10,13 @@
   margin-left: auto;
   margin-right: auto;
   background-color: @white;
-  z-index: 1000;
+  z-index: 100;
 }
 
+.header__logo-img {
+  width: 102px;
+  height: 84px;
+}
 
 @media (min-width: @tablet-width) {
   .header {
@@ -28,5 +31,10 @@
 @media (min-width: @desktop-width) {
   .header {
     width: 1200px;
+  }
+
+  .header__logo-img {
+    width: 188px;
+    height: 96px;
   }
 }

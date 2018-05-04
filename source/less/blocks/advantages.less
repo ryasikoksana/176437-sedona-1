@@ -1,6 +1,5 @@
 .advantages {
   width: 320px;
-  margin: 0 auto;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 26px;
@@ -17,44 +16,47 @@
 
 .advantages__header {
   width: auto;
-  padding: 44px 0 28px 0;
+  padding: 28px 0 25px 0;
   text-align: center;
 
   &--gallery {
-    padding: 40px 0 29px 0;
+    padding-top: 25px;
     border-bottom: 1px solid #e5e5e5;
   }
 
   &--video {
-    padding: 35px 0 36px 0;
+    padding: 18px 0 34px 0;
   }
 
   &--feedback {
-    padding: 40px 0 20px 0;
-    border-bottom: 1px solid #e5e5e5;
+    padding: 26px 0 17px 0;
   }
 }
 
 .advantages__title {
   .font-title();
-  margin-bottom: 35px;
+  margin-bottom: 28px;
   padding: 0 30px;
 
-  &--gallery,
-  &--video,
   &--feedback {
-    margin-bottom: 30px;
+    margin-bottom: 26px;
   }
 }
 
 .advantages__text {
   margin: 0;
-  padding: 0 20px;
+  padding: 0 25px;
   font: inherit;
+
+  &--font {
+    padding: 0 20px;
+    line-height: 24px;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .advantages {
+    box-sizing: border-box;
     width: 768px;
 
     &--gallery {
@@ -65,20 +67,20 @@
   .advantages__header {
     width: 550px;
     margin: 0 auto;
-    padding: 50px 0 52px 0;
+    padding: 36px 0 52px 0;
 
     &--gallery {
-      padding: 72px 0 70px 0;
+      padding: 52px 0 68px 0;
       border-bottom: none;
     }
 
     &--feedback {
-      padding: 72px 0 80px 0;
+      padding: 52px 0 73px 0;
       border-bottom: none;
     }
 
     &--video {
-      padding: 69px 0 75px 0;
+      padding: 42px 0 72px 0;
     }
   }
 
@@ -89,7 +91,7 @@
     &--video,
     &--feedback {
       font-size: 30px;
-      margin-bottom: 34px;
+      margin-bottom: 32px;
     }
   }
 
@@ -112,6 +114,20 @@
 
     &--gallery {
       padding: 0;
+    }
+  }
+
+  .advantages__header {
+    &--gallery {
+      padding: 90px 0 70px 0;
+    }
+
+    &--video {
+      padding: 44px 0 70px 0;
+    }
+
+    &--feedback {
+      padding: 90px 0 58px 0;
     }
   }
 }

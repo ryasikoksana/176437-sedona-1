@@ -3,8 +3,80 @@
   width: 320px;
   height: 201px;
   margin: 0 auto;
-  margin-bottom: 115px;
-  background: @gray url("../../img/video-mobile@1x.jpg") no-repeat center / cover;
+  margin-bottom: 105px;
+  background: @gray url("../img/video-mobile@1x.jpg") no-repeat center / cover;
+}
+
+.video__controls {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -66px;
+  width: 280px;
+  height: 111px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.video__range-controls {
+  width: 100%;
+  height: 45px;
+}
+
+.video__scale {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 235px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.video__bar {
+  position: absolute;
+  top: -3px;
+  left: 36px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: @white;
+}
+
+.video__button {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 66px;
+  padding: 0 19px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  align-items: center;
+}
+
+.video__repeat,
+.video__subtitles,
+.video__full-screen {
+  min-height: 20px;
+  border: none;
+  fill: #5c6870;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    fill: #333333;
+  }
+
+  &:active {
+    fill: rgba(51, 51, 51, 0.3);
+  }
+}
+
+.video__repeat {
+  margin-right: 120px;
+}
+
+.video__subtitles {
+  margin-right: 20px;
 }
 
 @media (min-width: @tablet-width) {
@@ -13,12 +85,69 @@
     height: 499px;
     margin-bottom: 40px;
   }
+
+  .video__controls {
+    width: 100%;
+    height: 92px;
+    bottom: 0;
+  }
+
+  .video__range-controls {
+    height: 100%;
+  }
+
+  .video__scale {
+    top: 45px;
+    left: 94px;
+    transform: translateX(0%);
+    width: 389px;
+  }
+
+  .video__bar {
+    left: 112px;
+  }
+
+  .video__button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 92px;
+    padding: 0 30px;
+    background-color: transparent;
+  }
+
+  .video__repeat,
+  .video__subtitles,
+  .video__full-screen {
+    fill: @white;
+
+    &:hover,
+    &:focus {
+      fill: rgba(255, 255, 255, 0.6);
+    }
+
+    &:active {
+      fill: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  .video__repeat {
+    margin-right: 460px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .video {
     width: 800px;
     height: 500px;
-    margin-bottom: 85px;
+    margin-bottom: 87px;
+  }
+
+  .video__scale {
+    width: 539px;
+  }
+
+  .video__repeat {
+    margin-right: 610px;
   }
 }
