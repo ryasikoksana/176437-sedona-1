@@ -1,6 +1,7 @@
 .features {
   width: 280px;
-  padding: 26px 20px;
+  padding: 20px;
+  padding-top: 25px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -45,7 +46,7 @@
   &--food::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 5px;
     left: 0;
     width: 38px;
     height: 35px;
@@ -59,6 +60,8 @@
 }
 
 .features__text {
+  margin: 0;
+  padding: 14px 0 7px 0;
   font: inherit;
 }
 
@@ -76,7 +79,7 @@
 
   .features__item {
     width: 166px;
-    padding: 161px 45px 63px 45px;
+    padding: 159px 45px 54px 45px;
 
     &--souvenir {
       order: 3;
@@ -85,7 +88,7 @@
     &--house::before {
       top: 60px;
       left: 50%;
-      margin-left: -37px;
+      margin-left: -38px;
       width: 77px;
       height: 73px;
     }
@@ -110,11 +113,25 @@
   .features__title {
     .font-title-max();
   }
+
+  .features__text {
+    padding: 20px 0 7px 0;
+
+    &--food {
+      padding: 20px 5px 7px 5px;
+    }
+  }
+}
+
+@media (max-width: @tablet-width-only) {
+  .features__item--souvenir br {
+    display: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .features__item {
-    width: 400px;
-    padding: 161px 55px 85px 55px;
+    width: 410px;
+    padding: 159px 45px 75px 45px;
   }
 }

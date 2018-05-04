@@ -1,7 +1,7 @@
 .advantage {
   position: relative;
   width: 280px;
-  padding: 40px 20px;
+  padding: 39px 20px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -24,16 +24,31 @@
   */
   &--blue {
     background: @blue;
+    color: @white;
   }
 
   &--blue1 {
-    padding-top: 72px;
+    padding-top: 56px;
   }
 
   &--gray {
     width: 250px;
     background: @gray;
-    padding: 29px 35px;
+    padding: 29px 35px 25px 35px;
+  }
+
+  &--gray::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    width: 280px;
+    height: 1px;
+    background-color: #d6d6d6;
+  }
+
+  &--gray:last-child::after {
+    display: none;
   }
 }
 
@@ -42,41 +57,78 @@
 }
 
 .advantage__number {
-  padding: 15px 0 20px 0;
+  padding: 10px 0 15px 0;
 }
 
 .advantage__text {
   .indents();
 }
 
+@media (max-width: @mobile-width-only) {
+  .advantage--blue2 br {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .advantage {
-    width: 176px;
-    padding: 42px 40px;
+    width: 166px;
+    padding: 44px 45px;
 
     &--blue2 {
       order: 2;
     }
 
     &--gray {
-      width: 156px;
-      padding: 45px 50px;
+      width: 148px;
+      padding: 45px 54px;
+    }
+
+    &--gray:first-child {
+      width: 166px;
+      padding: 45px;
+    }
+
+    &--gray::after {
+      display: none;
     }
   }
 
   .advantage__title {
     .font-title-max();
   }
+
+  .advantage__number {
+    padding: 10px 0 21px 0;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .advantage {
     width: 280px;
-    padding: 52px 60px 60px 60px;
+    padding: 52px 60px 58px 60px;
+
+    &--blue2 {
+      padding: 52px 83px 58px 83px;
+    }
 
     &--gray {
-      width: 300px;
-      padding: 45px 50px 68px 50px;
+      width: 264px;
+      padding: 45px 68px 66px 68px;
+    }
+
+    &--gray:first-child {
+      width: 310px;
+      padding: 45px 45px 66px 45px;
+    }
+  }
+
+  .advantage__title {
+    display: block;
+    padding: 0 70px;
+
+    &--2 {
+      padding: 0;
     }
   }
 }

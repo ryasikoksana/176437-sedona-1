@@ -1,7 +1,6 @@
 .banner {
   position: relative;
   width: 320px;
-  margin: 0 auto;
   background-color: @blue;
   background-image: url("../../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -43,7 +42,7 @@
 
 @media (min-width: @tablet-width) {
   .banner {
-    width: 768px;
+    width: 100%;
 
     &--page2 {
       background-size: cover;
@@ -52,13 +51,13 @@
 
   .banner__text {
     width: 460px;
-    height: 351px;
+    height: auto;
     padding-top: 77px;
     padding-bottom: 90px;
 
     &--page2 {
       width: 458px;
-      height: 78px;
+      height: auto;
       padding-top: 95px;
       padding-bottom: 117px;
     }
@@ -67,13 +66,13 @@
 
 @media (min-width: @desktop-width) {
   .banner {
-    width: 1200px;
+    max-width: 1200px;
   }
 
   .banner__text {
     &--page2 {
       width: 460px;
-      height: 80px;
+      height: auto;
       padding-top: 102px;
       padding-bottom: 120px;
     }
