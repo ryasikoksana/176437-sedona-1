@@ -31,7 +31,10 @@
         <div class="header__logo">
           <div class="header__logo-image">
             <a class="header__link" href="index.html">
-              <img class="header__logo-img" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип «Седона»">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+                <img class="header__logo-img" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип «Седона»">
+              </picture>
             </a>
           </div>
         </div>
@@ -48,7 +51,7 @@
           <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post">
             <div class="form__elements">
               <div class="form__fieldset form__fieldset--name">
-                <legend class="form__legend form__legend--name">Представьтесь:</legend>
+                <div class="form__legend form__legend--name">Представьтесь:</div>
                 <div class="form__row form__row--name">
                   <label for="name">Имя<sup>*</sup>:</label>
                   <input class="form__input-text form__input-text--name" type="text" name="name" id="name" placeholder="Петр" required>
@@ -63,7 +66,7 @@
                 </div>
               </div>
               <div class="form__fieldset form__fieldset--contacts">
-                <legend class="form__legend form__legend--contacts">Контактная информация:</legend>
+                <div class="form__legend form__legend--contacts">Контактная информация:</div>
                 <div class="form__row form__row--contacts">
                   <label for="tel" class="form__label"><span class="form__label-first">Контактный</span> телефон<sup>*</sup>:</label>
                   <div class="form__input-wrapper">
@@ -80,7 +83,7 @@
                 </div>
               </div>
               <div class="form__fieldset form__fieldset--impression">
-                <legend class="form__legend form__legend--radio">Ваше общее впечатление:</legend>
+                <div class="form__legend form__legend--radio">Ваше общее впечатление:</div>
                 <ul class="form__list">
                   <li class="form__row form__row--radio">
                     <input class="form__input-radio" type="radio" name="option" value="1" id="positive-option" checked>
@@ -97,9 +100,9 @@
                 </ul>
               </div>
               <div class="form__fieldset form__fieldset--attraction">
-                <legend class="form__legend form__legend--checkbox">
+                <div class="form__legend form__legend--checkbox">
                   <span class="form__title">Посещенные достопримечательности:</span>
-                </legend>
+                </div>
                 <ul class="form__list form__list--attraction">
                   <li class="form__row form__row--checkbox">
                     <input class="form__input-checkbox" type="checkbox" name="bridge" id="bridge-option" checked>
@@ -120,7 +123,7 @@
                 </ul>
               </div>
               <div class="form__fieldset">
-                <legend class="form__legend form__legend--textarea">Опишите свои эмоции:</legend>
+                <div class="form__legend form__legend--textarea">Опишите свои эмоции:</div>
                 <textarea class="form__textarea" name="details" rows="5" required>Опишите подробно все свои восторги</textarea>
               </div>
             </div>
@@ -149,13 +152,13 @@
             Twitter
           </a>
           <a class="social__link social__link--facebook" href="#">
-            <svg class="social__icon-facebook" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
+            <svg class="social__icon-facebook" version="1.0" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
               <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787 C5.765,5.069,5.75,3.709,6.275,3.356z"/>
             </svg>
             Facebook
           </a>
           <a class="social__link social__link--youtube" href="#">
-            <svg class="social__icon-youtube" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
+            <svg class="social__icon-youtube" version="1.0" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
               <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"/>
             </svg>
             Уoutube
@@ -189,5 +192,6 @@
       </div>
     </div>
     <script src="js/script.js"></script>
+    <script src="js/picturefill.min.js"></script>
   </body>
 </html>
