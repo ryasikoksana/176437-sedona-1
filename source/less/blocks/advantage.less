@@ -10,18 +10,18 @@
   color: @black;
   text-transform: uppercase;
   text-align: center;
-  /*
+
   &--blue1::before {
     content: "";
     position: absolute;
-    top: -10px;
+    top: -20px;
     left: 0;
     width: 100%;
     height: 37px;
     background: url("../img/bg-triangle.svg") no-repeat center center;
     background-size: cover;
   }
-  */
+
   &--blue {
     background: @blue;
     color: @white;
@@ -74,6 +74,10 @@
   .advantage {
     width: 166px;
     padding: 44px 45px;
+
+    &--blue1::before {
+      display: none;
+    }
 
     &--blue2 {
       order: 2;
