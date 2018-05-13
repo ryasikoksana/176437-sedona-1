@@ -6,11 +6,13 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
+var htmlmin = require ("gulp-htmlmin");
 var autoprefixer = require("autoprefixer");
 var minify = require("gulp-csso");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
+var uglify = require("gulp-uglify");
 var rename = require("gulp-rename");
 var server = require("browser-sync").create();
 var run = require("run-sequence");
@@ -58,6 +60,8 @@ gulp.task("html", function() {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(gulp.dest("build"))
+    .pipe(htmlmin({collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 });
 
@@ -75,6 +79,13 @@ gulp.task("webp", function() {
   return gulp.src("source/img/**/*.jpg")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("source/img"));
+});
+
+gulp.task("minjs", function () {
+  return gulp.src("source/js/script.js")
+    .pipe(uglify())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("source/js"));
 });
 
 gulp.task("build", function(done) {

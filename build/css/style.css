@@ -3,12 +3,14 @@
   src: url("../fonts/ptsans.woff2") format("wooff2"), url("../fonts/ptsans.woff") format("wooff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "PT Sans";
   src: url("../fonts/ptsansbold.woff2") format("wooff2"), url("../fonts/ptsansbold.woff") format("wooff");
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
