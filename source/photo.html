@@ -44,7 +44,7 @@
       </header>
       <main class="main">
         <section class="banner banner--page2">
-          <img class="banner__text banner__text--page2" src="img/text-sedona.svg" alt="Седона">
+          <img class="banner__text banner__text--page2" src="img/text-sedona.svg" width="460" height="80" alt="Седона">
         </section>
         <section class="gallery advantages advantages--gallery">
           <header class="advantages__header advantages__header--gallery">
@@ -61,7 +61,7 @@
                     <source type="image/webp" srcset="img/photo-sunset-mobile@1x.webp 1x, img/photo-sunset-mobile@2x.webp 2x">
                     <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
-                    <img class="photo__image photo__image--1" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg" alt="Фото «Неродные просторы»">
+                    <img class="photo__image photo__image--1" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="Фото «Неродные просторы»">
                   </picture>
                 </a>
               </figure>
@@ -88,7 +88,7 @@
                     <source type="image/webp" srcset="img/photo-cactus-mobile@1x.webp 1x, img/photo-cactus-mobile@2x.webp 2x">
                     <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
-                    <img class="photo__image" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg" alt="Фото «Местная растительность»">
+                    <img class="photo__image" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="Фото «Местная растительность»">
                   </picture>
                 </a>
               </figure>
@@ -115,7 +115,7 @@
                     <source type="image/webp" srcset="img/photo-roads-mobile@1x.webp 1x, img/photo-roads-mobile@2x.webp 2x">
                     <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
-                    <img class="photo__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg" alt="Фото «Дорога на север»">
+                    <img class="photo__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" alt="Фото «Дорога на север»">
                   </picture>
                 </a>
               </figure>
@@ -142,7 +142,7 @@
                     <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp 1x, img/photo-bridge-mobile@2x.webp 2x">
                     <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
-                    <img class="photo__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg" alt="Фото «Мост дьявола»">
+                    <img class="photo__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Фото «Мост дьявола»">
                   </picture>
                 </a>
               </figure>
@@ -168,6 +168,7 @@
             <p class="advantages__text advantages__text--tablet">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
           </div>
           <div class="video">
+            <div class="video__screen"></div>
             <div class="video__controls">
               <div class="video__range-controls">
                 <div class="video__scale">
@@ -175,20 +176,20 @@
                 </div>
               </div>
               <div class="video__button">
-                <button class="video__repeat" type="button">
-                  <svg role="img" class="video__icon-repeat" width="16" height="20">
+                <button class="video__repeat" type="button" aria-label="Повторить показ видео">
+                  <svg role="img" class="video__icon-repeat" width="16" height="20" tabindex="0">
                     <title>Повторить показ видео</title>
                     <use xlink:href="#icon-video-replay"></use>
                   </svg>
                 </button>
-                <button class="video__subtitles" type="button">
-                  <svg role="img" class="video__icon-subtitles" width="32" height="20">
+                <button class="video__subtitles" type="button" aria-label="Показать субтитры">
+                  <svg role="img" class="video__icon-subtitles" width="32" height="20" tabindex="0">
                     <title>Показать субтитры</title>
                     <use xlink:href="#icon-video-subtitles"></use>
                   </svg>
                 </button>
-                <button class="video__full-screen" type="button">
-                  <svg role="img" class="video__icon-full-screen" width="20" height="20">
+                <button class="video__full-screen" type="button" aria-label="Развернуть полный экран">
+                  <svg role="img" class="video__icon-full-screen" width="20" height="20" tabindex="0">
                     <title>Развернуть полный экран</title>
                     <use xlink:href="#icon-video-fullscreen"></use>
                   </svg>

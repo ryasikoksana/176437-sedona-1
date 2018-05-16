@@ -7,10 +7,6 @@
   color: @black;
 }
 
-fieldset {
-  border: none;
-}
-
 .form__fieldset {
   position: relative;
   width: 320px;
@@ -32,6 +28,7 @@ fieldset {
 }
 
 .form__legend {
+  display: block;
   .font-title();
   color: #000000;
   text-align: center;
@@ -75,32 +72,17 @@ fieldset {
   position: relative;
 }
 
-input[type="text"],
-input[type="tel"],
-input[type="email"] {
+.form__input-text {
   box-sizing: border-box;
+  width: 192px;
   height: 58px;
+  margin-left: 15px;
   padding-left: 20px;
   font-family: "PT Sans", "Arial", sans-serif;
   .font-title();
   background: #f2f2f2;
   color: #000000;
   border: 4px solid #f2f2f2;
-
-  &:hover {
-    background: #e5e5e5;
-    border: 4px solid #e5e5e5;
-  }
-
-  &:focus {
-    background: transparent;
-    border: 4px solid #e5e5e5;
-  }
-}
-
-.form__input-text {
-  width: 192px;
-  margin-left: 15px;
 
   &--name {
     width: 230px;
@@ -116,6 +98,16 @@ input[type="email"] {
     width: 100%;
     margin-left: 0;
     margin-top: 6px;
+  }
+
+  &:hover {
+    background: #e5e5e5;
+    border: 4px solid #e5e5e5;
+  }
+
+  &:focus {
+    background: transparent;
+    border: 4px solid #e5e5e5;
   }
 }
 
@@ -159,22 +151,22 @@ input[type="email"] {
   list-style: none;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
+.form__input-radio,
+.form__input-checkbox {
   box-sizing: border-box;
   padding: 0;
 }
 
 input.form__input-radio[type="radio"],
 input.form__input-checkbox[type="checkbox"] {
-  display: none;
+  opacity: 0;
 }
 
 .form__row--radio label,
 .form__row--checkbox label {
   position: relative;
   display: inline-block;
-  padding-left: 78px;
+  padding-left: 62px;
   .font-title();
   color: #000000;
   text-transform: none;
@@ -184,7 +176,7 @@ input.form__input-checkbox[type="checkbox"] {
   &::before {
     content: "";
     position: absolute;
-    left: 0;
+    left: -15px;
     bottom: -15px;
     width: 56px;
     height: 56px;
@@ -202,15 +194,20 @@ input.form__input-checkbox[type="checkbox"] {
 }
 
 input.form__input-radio[type="radio"]:checked + label::before {
-  background-color: #000000;
   width: 22px;
   height: 22px;
+  background-color: #000000;
   border-radius: 50%;
   border: 17px solid #f2f2f2;
 }
 
 input.form__input-radio[type="radio"] + label:hover::before {
   background-color: #e5e5e5;
+}
+
+input.form__input-radio[type="radio"]:focus + label::before,
+input.form__input-checkbox[type="checkbox"]:focus + label::before {
+  outline: @blue auto 2px;
 }
 
 input.form__input-radio[type="radio"] + label:active::before {
